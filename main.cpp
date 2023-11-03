@@ -1,4 +1,6 @@
 #include <iostream>
+#include <sstream>
+
 using namespace std;
 
 /**
@@ -28,37 +30,37 @@ size_t GetSize(const std::string& message);
  * @param array массив.
  * @param size_ размер массива.
  */
-void Print(int* arr,const size_t size);
+string ToString(const int* array, const size_t size_);
 
 int main() 
 {
-  size_t size;
   
   try{
+    size_t size;
+
     size = GetSize("введите размер массива ");
+    size_t SizeArr = size;
+    int* myArray = nullptr;
+
+  
+    myArray = CreateArray(SizeArr);
+  
+    cout << ToString(NewArray, size);
+    cout << "\n Массив в отсортированном виде методом пузырька" << endl;
+    bubbleSort(myArray, size);
+  
+    cout << ToString(NewArray, size);
+
+    if (myArray != nullptr){
+      delete[] myArray;
+      myArray = nullptr;
+    }
+
   }
   catch (const std::invalid_argument& e) {
         std::cout << "Ошибка: " << e.what() << std::endl;
         return 1;
   }
-  size_t SizeArr = size;
-  int* myArray = nullptr;
-
-  
-  myArray = CreateArray(SizeArr);
-  
-  cout << "Массив: ";
-  Print(myArray,SizeArr);
-  cout << "\n Массив в отсортированном виде методом пузырька" << endl;
-  bubbleSort(myArray, size);
-  
-  Print(myArray,SizeArr);
-  if (myArray != nullptr)
-{
-   delete[] myArray;
-   myArray = nullptr;
-}
-
 
   return 0;
   
@@ -99,8 +101,14 @@ void bubbleSort(int* arr,const size_t size)
             }
 }
 
-void Print(int* arr,const size_t size){
-  for(size_t i =0 ; i<size; i++){
-    cout<< " " << arr[i] << " ";
+string ToString(const int* array, const size_t size_)
+{
+  std::stringstream buffer{};
+
+  for(size_t index = 0;index < size_ ;index++){
+    buffer << array[index] << " ";
   }
+  buffer << "\n";
+
+  return buffer.str();  
 }
