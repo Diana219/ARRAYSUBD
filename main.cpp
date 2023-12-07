@@ -32,24 +32,26 @@ size_t GetSize(const std::string& message);
  */
 string ToString(const int* array, const size_t size_);
 
+
+/**
+ * @brief Точка входа в программу возвращает 0 при успехе.
+ * @return Текст программы.
+ */
 int main() 
 {
-  
-  try{
-    size_t size;
 
-    size = GetSize("введите размер массива ");
-    size_t SizeArr = size;
+  try{
+    size_t size = GetSize("введите размер массива ");
     int* myArray = nullptr;
 
-  
-    myArray = CreateArray(SizeArr);
-  
-    cout << ToString(NewArray, size);
+
+    myArray = CreateArray(size);
+
+    cout << ToString(myArray, size);
     cout << "\n Массив в отсортированном виде методом пузырька" << endl;
     bubbleSort(myArray, size);
-  
-    cout << ToString(NewArray, size);
+
+    cout << ToString(myArray, size);
 
     if (myArray != nullptr){
       delete[] myArray;
@@ -63,7 +65,7 @@ int main()
   }
 
   return 0;
-  
+
 }
 
 size_t GetSize(const std::string& message){
@@ -76,14 +78,14 @@ size_t GetSize(const std::string& message){
         throw std::out_of_range("Incorrect size. Value has to be greater or equal zero.");
     }
 
-    return size;
+    return static_cast<size_t>(size);
 }
 
 int* CreateArray(const size_t size) {
-    
+
     int* array = new int[size];
     srand(time(0));
-    for (int i=0; i<size; i++){
+    for (size_t i=0; i<size; i++){
         array[i]=rand() % 100;
     }
     return array;
@@ -91,12 +93,11 @@ int* CreateArray(const size_t size) {
 
 void bubbleSort(int* arr,const size_t size)
 {
-    size_t i, j;
-    for (i = 0; i < size - 1; i++)
-        for (j = 0; j < size - i - 1; j++)
+    for (size_t i = 0; i < size - 1; i++)
+        for (size_t j = 0; j < size - i - 1; j++)
             if (arr[j] > arr[j + 1])
             {
-               swap(arr[j], arr[j + 1]);
+              std::swap(arr[j], arr[j + 1]);
 
             }
 }
