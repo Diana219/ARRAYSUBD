@@ -4,9 +4,7 @@
 
 using namespace std;
 
-/*
-* @brief Класс ListTest. Используется для дальнейшего тестирования класса List.
-*/
+
 class ListTest : public testing::Test {
 protected:
 	List<int> l1;
