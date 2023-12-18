@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>D:\4KyrsProgram\__List\List\x64\Debug\ListTests.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="ListTest.TestName" Duration="1" />
+    <TestDuration Test="ListTest.PushBackWorks" Duration="1" />
+    <TestDuration Test="ListTest.ConstructorWithParametersWorks" Duration="1" />
+    <TestDuration Test="ListTest.ConstructorWithIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.ConstructorWithStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.CopyConstructorIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.CopyConstructorStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.PushBackIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.PushBackStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.PushFrontIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.PushFrontStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.PopFrontThrowsLogicError" Duration="2" />
+    <TestDuration Test="ListTest.PopFrontWorks" Duration="1" />
+    <TestDuration Test="ListTest.PopBackThrowsLogicError" Duration="1" />
+    <TestDuration Test="ListTest.PopBackWorks" Duration="1" />
+    <TestDuration Test="ListTest.DeleteElementThrowsOutOfRange" Duration="1" />
+    <TestDuration Test="ListTest.DeleteElementWorks" Duration="1" />
+    <TestDuration Test="ListTest.InsertElementThrowsOutOfRange" Duration="1" />
+    <TestDuration Test="ListTest.InserElementIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.InsertElementStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetFrontIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetFrontStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetBackIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetBackStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetElementIntThrowsOutOfRange" Duration="1" />
+    <TestDuration Test="ListTest.GetElementIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetElementStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.SwapThrowsOutOfRange" Duration="1" />
+    <TestDuration Test="ListTest.SwapIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.SwapStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetMaxIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetMaxStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetMinIntWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetMinStringWorks" Duration="1" />
+    <TestDuration Test="ListTest.DeleteAllWorks" Duration="1" />
+    <TestDuration Test="ListTest.GetElementThrowsOutOfRange" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
